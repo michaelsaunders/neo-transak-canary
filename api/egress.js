@@ -2,14 +2,14 @@
 // Purpose: measure whether Vercel serverless egress satisfies Transak's api-gateway
 // ip_not_allowed source-IP guard. Restricted: fixed host allowlist + shared token.
 const ALLOW = {
-  "/gw": { host: "api-gateway.transak.com", path: "/api/v2/auth/session" },
-  "/reliance-id": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/identity-details" },
-  "/reliance-doc": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/document-details" },
-  "/reliance-bio": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/biometrics" },
-  "/kycuser": { host: "api-gateway.transak.com", path: "/api/v2/kyc/user" },
-  "/api-user": { host: "api.transak.com", path: "/api/v2/user" },
-  "/ts": { host: "api-gateway.transak.com", path: "/api/v2/transaction-session" },
-  "/internal-reliance": { host: "kyc.backend", path: "/kyc/internal/v2/reliance/identity-details" },
+  "gw": { host: "api-gateway.transak.com", path: "/api/v2/auth/session" },
+  "reliance-id": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/identity-details" },
+  "reliance-doc": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/document-details" },
+  "reliance-bio": { host: "api-gateway.transak.com", path: "/kyc/v2/reliance/biometrics" },
+  "kycuser": { host: "api-gateway.transak.com", path: "/api/v2/kyc/user" },
+  "api-user": { host: "api.transak.com", path: "/api/v2/user" },
+  "ts": { host: "api-gateway.transak.com", path: "/api/v2/transaction-session" },
+  "internal-reliance": { host: "kyc.backend", path: "/kyc/internal/v2/reliance/identity-details" },
 };
 const TOKEN = "b7c1e9f04a2d4c6e8a1b3d5f7091c2e4";
 
